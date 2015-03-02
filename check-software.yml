@@ -1,6 +1,7 @@
 ---
-  - hosts: all
+  - hosts: tag_role_dialer
     sudo: true
+    gather_facts: false
 
     tasks:
       - name: query the packages for the right version of glibc
