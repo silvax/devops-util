@@ -1,9 +1,10 @@
 ---
-hosts: tag_role_dialer
-sudo: true
-tasks:
-  - name: query the packages for the right version of glibc
-    yum: name=glibc
-    register: glibc_version
+  - hosts: all
+    sudo: true
 
-  - debug: var=glibc_version
+    tasks:
+      - name: query the packages for the right version of glibc
+        yum: name=glibc
+        register: glibc_version
+
+      - debug: var=glibc_version
