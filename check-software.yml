@@ -1,5 +1,5 @@
 ---
-  - hosts: tag_role_dialer
+  - hosts: "{{ hosts_to_run }}"
     sudo: true
     gather_facts: false
 
